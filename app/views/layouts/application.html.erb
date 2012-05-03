@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<%= render :partial => "/shared/html_tag" %>
-  <% site_bar = render(:partial => "/shared/site_bar", :locals => {:head => true}) -%>
-  <% content_for :stylesheets, stylesheet_link_tag('styles.css') %>
+<%= render '/refinery/html_tag' %>
+  <% site_bar = render(:partial => "/refinery/site_bar", :locals => {:head => true}) -%>
+  <% content_for :stylesheets, stylesheet_link_tag('application.css') %>
   <%= render :partial => "/shared/head" %>
   <body>
     <%= site_bar -%>
-    <%= render :partial => "/shared/ie6check" if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
+    <%= render "/refinery/ie6check" if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
     <div id="wrapper">
       <div id="container">
         <div id="header">
@@ -34,6 +34,6 @@
       </footer>
     </div>
     <!-- end wrapper>
-    <%= render :partial => "/shared/javascripts" %>
+    <%= render :partial => "/refinery/javascripts" %>
   </body>
 </html>
