@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <%= render '/refinery/html_tag' %>
-  <% site_bar = render(:partial => "/refinery/site_bar", :locals => {:head => true}) -%>
+  <% site_bar = render('/refinery/site_bar', :head => true) -%>
   <% content_for :stylesheets, stylesheet_link_tag('application.css') %>
-  <%= render :partial => "/shared/head" %>
+  <%= render "/shared/head" %>
   <body>
     <%= site_bar -%>
     <%= render "/refinery/ie6check" if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>

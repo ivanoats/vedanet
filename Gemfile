@@ -1,12 +1,16 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
+#gem 'refinerycms-copywriting'
 
+gem 'refinerycms-search', '~> 2.0.0', :git => 'git://github.com/resolve/refinerycms-search.git', :branch => '2-0-stable'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 group :development, :test do
+  gem 'rails-footnotes'
   gem 'sqlite3'
+  gem 'pry-rails'
 end
 
 
@@ -57,3 +61,5 @@ gem 'fog'
 
 # Postgres support (added for Heroku)
 gem 'pg'
+
+gem 'refinerycms-courses', :path => 'vendor/extensions'

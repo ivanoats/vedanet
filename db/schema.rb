@@ -11,7 +11,29 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120502034929) do
+ActiveRecord::Schema.define(:version => 20120511031508) do
+
+  create_table "copywriting_phrases", :force => true do |t|
+    t.string   "name"
+    t.text     "default"
+    t.text     "value"
+    t.string   "scope"
+    t.integer  "page_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "copywriting_phrases", ["name", "scope"], :name => "index_copywriting_phrases_on_name_and_scope"
+
+  create_table "refinery_courses", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.integer  "position"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "refinery_images", :force => true do |t|
     t.string   "image_mime_type"
