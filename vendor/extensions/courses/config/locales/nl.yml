@@ -1,0 +1,30 @@
+nl:
+  refinery:
+    plugins:
+      courses:
+        title: Courses
+    courses:
+      admin:
+        courses:
+          actions:
+            create_new: Maak een nieuwe Course
+            reorder: Wijzig de volgorde van de Courses
+            reorder_done: Klaar met het wijzingen van de volgorde van de Courses
+          records:
+            title: Courses
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Courses. Druk op 'Maak een nieuwe Course' om de eerste aan te maken.
+          course:
+            view_live_html: Bekijk deze course op de website <br/><em>(opent een nieuw venster)</em>
+            edit: Bewerk deze course
+            delete: Verwijder deze course voor eeuwig
+      courses:
+        show:
+          other: Andere Courses
+  activerecord:
+    attributes:
+      'refinery/courses/course':
+        name: Name
+        description: Description
+        start_date: Start Date
+        end_date: End Date

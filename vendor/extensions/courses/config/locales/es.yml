@@ -1,0 +1,31 @@
+es:
+  refinery:
+    plugins:
+      courses:
+        title: Courses
+#        article: masculino/femenino
+    courses:
+      admin:
+        courses:
+          actions:
+            create_new: Crear nuevo course
+            reorder: Reordenar courses
+            reorder_done: Reordenación de courses completada
+          records:
+            title: Courses
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay courses todavía. Pulsa en "Crear nuevo Course" para crear tu primer course.
+          course:
+            view_live_html: Ver este course como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este course
+            delete: Borrar este course para siempre
+      courses:
+        show:
+          other: Otros courses
+  activerecord:
+    attributes:
+      'refinery/courses/course':
+        name: Name
+        description: Description
+        start_date: Start Date
+        end_date: End Date

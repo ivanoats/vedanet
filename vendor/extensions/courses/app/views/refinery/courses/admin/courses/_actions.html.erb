@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::Courses::Admin::CoursesController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.courses_admin_courses_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_courses_admin_course_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::Courses::Admin::CoursesController.sortable? && ::Refinery::Courses::Course.any? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Courses"),
+                 refinery.courses_admin_courses_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Courses"),
+                 refinery.courses_admin_courses_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>

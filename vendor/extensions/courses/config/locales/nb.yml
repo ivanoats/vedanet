@@ -1,0 +1,30 @@
+nb:
+  refinery:
+    plugins:
+      courses:
+        title: Courses
+    courses:
+      admin:
+        courses:
+          actions:
+            create_new: Lag en ny Course
+            reorder: Endre rekkefølgen på Courses
+            reorder_done: Ferdig å endre rekkefølgen Courses
+          records:
+            title: Courses
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Courses enda. Klikk på "Lag en ny Course" for å legge til din første course.
+          course:
+            view_live_html: Vis hvordan denne course ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne course
+            delete: Fjern denne course permanent
+      courses:
+        show:
+          other: Andre Courses
+  activerecord:
+    attributes:
+      'refinery/courses/course':
+        name: Name
+        description: Description
+        start_date: Start Date
+        end_date: End Date

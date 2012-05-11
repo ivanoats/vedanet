@@ -1,0 +1,30 @@
+fr:
+  refinery:
+    plugins:
+      courses:
+        title: Courses
+    courses:
+      admin:
+        courses:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Course
+            reorder: Réordonner les Courses
+            reorder_done: Fin de réordonnancement des Courses
+          records:
+            title: Courses
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Course. Cliquer sur "Créer un(e) nouve(au/l/lle) Course" pour créer votre premi(er/ère) course.'
+          course:
+            view_live_html: Voir ce(t/tte) course <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) course
+            delete: Supprimer définitivement ce(t/tte) course
+      courses:
+        show:
+          other: Autres Courses
+  activerecord:
+    attributes:
+      'refinery/courses/course':
+        name: Name
+        description: Description
+        start_date: Start Date
+        end_date: End Date
