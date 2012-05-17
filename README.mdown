@@ -1,0 +1,6 @@
+# Vedanet.com website for David Frawley #
+
+Design by [Mani Sheriar](http://www.manisheriar.com/)
+base Content Management System by [RefineryCMS](http://refinerycms.com)
+Theming and Custom Extensions by [Ivan Storck](http://ivanstorck.com)
+

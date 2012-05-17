@@ -3,7 +3,7 @@ module Refinery
     class Book < Refinery::Core::BaseModel
       self.table_name = 'refinery_books'
 
-      attr_accessible :title, :position
+      attr_accessible :title, :position, :description, :cover_id
 
       acts_as_indexed :fields => [:title, :description]
 
