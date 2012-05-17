@@ -9,8 +9,8 @@
 # Added by Refinery CMS Pages extension
 Refinery::Pages::Engine.load_seed
 
-# Added by RefineryCMS Copywriting engine
-Refinery::Copywriting::Engine.load_seed
-
 # Added by Refinery CMS Courses extension
 Refinery::Courses::Engine.load_seed
+
+# Added by Refinery CMS Books extension
+Refinery::Books::Engine.load_seed

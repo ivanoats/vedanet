@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120511031508) do
+ActiveRecord::Schema.define(:version => 20120517020920) do
 
   create_table "copywriting_phrases", :force => true do |t|
     t.string   "name"
@@ -24,6 +24,15 @@ ActiveRecord::Schema.define(:version => 20120511031508) do
   end
 
   add_index "copywriting_phrases", ["name", "scope"], :name => "index_copywriting_phrases_on_name_and_scope"
+
+  create_table "refinery_books", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.integer  "cover_id"
+    t.integer  "position"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "refinery_courses", :force => true do |t|
     t.string   "name"
