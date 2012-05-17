@@ -65,3 +65,4 @@ gem 'pg'
 gem 'refinerycms-courses', :path => 'vendor/extensions'
 
 gem 'refinerycms-books', :path => 'vendor/extensions'
+gem 'refinerycms-videos', :path => 'vendor/extensions'

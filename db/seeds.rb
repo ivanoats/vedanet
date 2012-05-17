@@ -14,3 +14,6 @@ Refinery::Courses::Engine.load_seed
 
 # Added by Refinery CMS Books extension
 Refinery::Books::Engine.load_seed
+
+# Added by Refinery CMS Videos extension
+Refinery::Videos::Engine.load_seed

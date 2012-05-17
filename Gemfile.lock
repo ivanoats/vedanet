@@ -13,6 +13,8 @@ PATH
       refinerycms-core (~> 2.0.4)
     refinerycms-courses (1.0)
       refinerycms-core (~> 2.0.3)
+    refinerycms-videos (1.0)
+      refinerycms-core (~> 2.0.4)
 
 GEM
   remote: https://rubygems.org/
@@ -244,6 +246,7 @@ DEPENDENCIES
   refinerycms-courses!
   refinerycms-i18n (~> 2.0.0)
   refinerycms-search (~> 2.0.0)!
+  refinerycms-videos!
   sass-rails (~> 3.2.3)
   sqlite3
   uglifier (>= 1.0.3)
