@@ -3,13 +3,13 @@
               :object => @video,
               :include_object_name => true %>
 
-  
+
   <div class='field'>
     <%= f.label :title -%>
     <%= f.text_field :title, :class => 'larger widest'  -%>
 
   </div>
-  
+
   <div class='field'>
     <div id='page-tabs' class='clearfix ui-tabs ui-widget ui-widget-content ui-corner-all'>
       <ul id='page_parts'>
@@ -22,14 +22,15 @@
       <div id='page_part_editors'>
         <% [:embed_code].each do |part| %>
           <div class='page_part' id='<%= part %>'>
-            <%= f.text_area part, :rows => 20, :class => 'wymeditor widest' -%>
+            <p>Paste raw embed code here. No special editor needed.</p>
+            <%= f.text_area part, :rows => 3, :class => 'widest' -%>
           </div>
         <% end %>
       </div>
     </div>
 
   </div>
-  
+
   <%= render '/refinery/admin/form_actions', :f => f,
              :continue_editing => false,
              :delete_title => t('delete', :scope => 'refinery.videos.admin.videos.video'),

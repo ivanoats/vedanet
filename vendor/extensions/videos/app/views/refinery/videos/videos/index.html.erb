@@ -2,6 +2,7 @@
   <ul id="videos">
     <% @videos.each do |video| %>
       <li>
+        <%= image_tag "http://img.youtube.com/vi/#{video.id}/default.jpg", alt: 'video thumbnail' %>
         <%= link_to video.title, refinery.videos_video_path(video) %>
       </li>
     <% end %>
