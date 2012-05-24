@@ -3,7 +3,7 @@ module Refinery
     class Video < Refinery::Core::BaseModel
       self.table_name = 'refinery_videos'
 
-      attr_accessible :title, :position, :embed_code
+      attr_accessible :title, :position, :embed_code, :youtube_id
 
       acts_as_indexed :fields => [:title, :embed_code]
 

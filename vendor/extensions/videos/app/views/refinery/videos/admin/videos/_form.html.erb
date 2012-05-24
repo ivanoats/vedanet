@@ -11,24 +11,9 @@
   </div>
 
   <div class='field'>
-    <div id='page-tabs' class='clearfix ui-tabs ui-widget ui-widget-content ui-corner-all'>
-      <ul id='page_parts'>
-        <% [:embed_code].each_with_index do |part, part_index| %>
-          <li class='ui-state-default<%= ' ui-state-active' if part_index == 0 %>'>
-            <%= link_to t("#{part}", :scope => "activerecord.attributes.refinery/videos/video", :default => part.to_s.titleize), "##{part}" %>
-          </li>
-        <% end %>
-      </ul>
-      <div id='page_part_editors'>
-        <% [:embed_code].each do |part| %>
-          <div class='page_part' id='<%= part %>'>
-            <p>Paste raw embed code here. No special editor needed.</p>
-            <%= f.text_area part, :rows => 3, :class => 'widest' -%>
-          </div>
-        <% end %>
-      </div>
-    </div>
-
+    <p>How to find the YouTube video ID. Click image below to enlarge.<p><a href="/assets/how-to-find-youtube-video-id.jpg"><%= image_tag "how-to-find-youtube-video-id.jpg", size: "200x100", title: "Click to Enlarge" %></a></p>
+    <%= f.label "YouTube ID" -%>
+    <%= f.text_field :youtube_id %>
   </div>
 
   <%= render '/refinery/admin/form_actions', :f => f,
