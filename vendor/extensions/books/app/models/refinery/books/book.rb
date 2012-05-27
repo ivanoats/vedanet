@@ -1,6 +1,10 @@
 module Refinery
   module Books
     class Book < Refinery::Core::BaseModel
+
+      extend FriendlyId
+        friendly_id :title, use: :slugged
+
       self.table_name = 'refinery_books'
 
       attr_accessible :title, :position, :description, :cover_id
