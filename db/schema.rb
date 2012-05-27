@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120523040411) do
+ActiveRecord::Schema.define(:version => 20120527174106) do
 
   create_table "copywriting_phrases", :force => true do |t|
     t.string   "name"
@@ -174,7 +174,10 @@ ActiveRecord::Schema.define(:version => 20120523040411) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "youtube_id"
+    t.string   "slug"
   end
+
+  add_index "refinery_videos", ["slug"], :name => "index_refinery_videos_on_slug"
 
   create_table "seo_meta", :force => true do |t|
     t.integer  "seo_meta_id"
