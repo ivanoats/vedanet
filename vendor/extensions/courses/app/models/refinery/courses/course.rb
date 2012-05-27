@@ -1,6 +1,10 @@
 module Refinery
   module Courses
     class Course < Refinery::Core::BaseModel
+
+      extend FriendlyId
+        friendly_id :name, use: :slugged
+
       self.table_name = 'refinery_courses'
 
       acts_as_indexed :fields => [:name, :description]
