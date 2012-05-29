@@ -700,7 +700,11 @@ a:focus {
 	text-decoration:underline;
 }
 
-#book img {
+section#book img {
   float: left;
   padding: 0px 20px 10px 0;
+}
+ul#books li img {
+    vertical-align: middle;
+    padding-right: 20px;
 }

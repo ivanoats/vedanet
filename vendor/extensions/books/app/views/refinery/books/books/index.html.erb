@@ -2,6 +2,7 @@
   <ul id="books">
     <% @books.each do |book| %>
       <li>
+        <%= image_fu book.cover, '75x75' %>
         <%= link_to book.title, refinery.books_book_path(book) %>
       </li>
     <% end %>
