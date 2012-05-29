@@ -3,22 +3,10 @@
 <% end %>
 
 <% content_for :body_content_left do %>
-  <section>
-    <h1>Title</h1>
-    <p>
-      <%=raw @book.title %>
-    </p>
-  </section>
-  <section>
-    <h1>Description</h1>
-    <p>
-      <%=raw @book.description %>
-    </p>
-  </section>
-  <section>
-    <h1>Cover</h1>
+ <section id="book">
     <p>
       <%= image_fu @book.cover, nil %>
+      <%=raw @book.description %>
     </p>
   </section>
 <% end %>
